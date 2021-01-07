@@ -20,10 +20,12 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 
-// const cors = require('cors');
+const cors = require('cors');
 const jsonParser = bodyParser.json();
 let clientId;
-// app.use(cors());
+app.use(cors({
+  origin: 'https://jeeva.dev'
+}));
 
 
 const admin = require("firebase-admin");
